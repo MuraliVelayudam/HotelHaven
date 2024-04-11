@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './layouts/Layout'
+import Register from './pages/Register'
 
 export default function App() {
     return (
@@ -9,6 +10,14 @@ export default function App() {
                 element={
                     <Layout>
                         <h1>Home</h1>
+                    </Layout>
+                }
+            />
+            <Route
+                path="/register"
+                element={
+                    <Layout>
+                        <Register />
                     </Layout>
                 }
             />
