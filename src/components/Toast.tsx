@@ -19,13 +19,13 @@ const Toast = ({ message, type, onclose }: ToastType) => {
 
     const styles =
         type === 'SUCCESS'
-            ? 'fixed top-4 right-4 bg-green-600 px-3 py-4 rounded-sm max-w-md text-white'
-            : 'fixed top-4 right-4 bg-red-600 px-3 py-4 rounded-sm max-w-md text-white'
+            ? 'fixed top-5 right-20 z-50 px-7 py-3 rounded-md bg-green-600 text-white max-w-md'
+            : 'fixed top-5 right-20 z-50 px-7 py-3 rounded-md bg-red-600 text-white max-w-md'
 
     return (
         <div className={styles}>
-            <div className="">
-                <span>{message}</span>
+            <div className="flex justify-center items-center">
+                <span className="text-md text-semibold tracking-wide">{message}</span>
             </div>
         </div>
     )

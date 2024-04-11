@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import * as apiClient from '../apiClient'
 import { useContextApp } from '../appContext/AppContext'
+import { useNavigate } from 'react-router-dom'
 
 export type RegisterFormData = {
     firstName: string
@@ -12,6 +13,8 @@ export type RegisterFormData = {
 }
 
 export default function Register() {
+    const navigate = useNavigate()
+
     const form = useForm<RegisterFormData>()
     const { register, handleSubmit, formState, watch } = form
     const { errors } = formState
@@ -25,6 +28,7 @@ export default function Register() {
                 type: 'SUCCESS',
                 message: 'Registration Successful',
             })
+            navigate('/')
         },
         onError: (error: Error) => {
             showToast({
