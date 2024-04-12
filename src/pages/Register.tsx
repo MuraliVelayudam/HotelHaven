@@ -109,6 +109,7 @@ export default function Register() {
                             },
                         })}
                     />
+                    {errors.password && <span className="text-xs text-red-600">{errors.password.message}</span>}
                 </label>
             </div>
             <div>
