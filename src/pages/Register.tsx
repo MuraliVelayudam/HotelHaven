@@ -16,7 +16,7 @@ export default function Register() {
     const navigate = useNavigate()
 
     const form = useForm<RegisterFormData>()
-    const { register, handleSubmit, formState, watch } = form
+    const { register, handleSubmit, formState, watch, reset } = form
     const { errors } = formState
 
     const context = useContextApp()
@@ -29,6 +29,7 @@ export default function Register() {
                 message: 'Registration Successful',
             })
             navigate('/')
+            reset()
         },
         onError: (error: Error) => {
             showToast({

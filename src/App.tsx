@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Register from './pages/Register'
+import SignIn from './pages/SignIn'
 
 export default function App() {
     return (
@@ -18,6 +19,14 @@ export default function App() {
                 element={
                     <Layout>
                         <Register />
+                    </Layout>
+                }
+            />
+            <Route
+                path="/singIn"
+                element={
+                    <Layout>
+                        <SignIn />
                     </Layout>
                 }
             />
