@@ -28,7 +28,6 @@ export default function SignIn() {
             navigate('/')
         },
         onError: (error: Error) => {
-            console.log(error)
             showToast({
                 type: 'ERROR',
                 message: error.message,
