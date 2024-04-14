@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation, useQueryClient } from 'react-query'
 import * as apiClient from '../apiClient'
 import { useContextApp } from '../appContext/AppContext'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export type RegisterFormData = {
     firstName: string
@@ -142,7 +142,14 @@ export default function Register() {
                 <button className="bg-blue-700 text-white px-6 py-2 rounded font-semibold tracking-wide">
                     Register
                 </button>
-                <p>Already have Account ?</p>
+                <p className="">
+                    Already have Account ?
+                    <span>
+                        <Link to={'/singIn'} className="px-2 font-semibold text-blue-700 hover:underline">
+                            Sign In Here
+                        </Link>
+                    </span>
+                </p>
             </div>
         </form>
     )

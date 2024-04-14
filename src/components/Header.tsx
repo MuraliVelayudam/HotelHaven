@@ -20,8 +20,18 @@ export default function Header() {
                 <span className="flex space-x-2">
                     {isLoggedIn ? (
                         <>
-                            <Link to={'/my_bookings'}>My Bookings</Link>
-                            <Link to={'/my_hotels'}>My Hotels</Link>
+                            <Link
+                                to={'/my_bookings'}
+                                className="flex text-white items-center hover:bg-blue-600 px-2 rounded-sm font-semibold"
+                            >
+                                My Bookings
+                            </Link>
+                            <Link
+                                to={'/my_hotels'}
+                                className="flex text-white items-center hover:bg-blue-600 px-2 rounded-sm font-semibold"
+                            >
+                                My Hotels
+                            </Link>
                             <SignOut />
                         </>
                     ) : (
